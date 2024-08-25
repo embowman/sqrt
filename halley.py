@@ -25,12 +25,12 @@ def halley_method(radicand: int, max_iterations: int):
 
         prev = curr
 
-    return prev
+    return round(prev)
 
 
 if __name__ == '__main__':
     root = halley_method(radicand=999_999_961_946_176, max_iterations=20)
-    print(round(root))
+    print(root)
 
     numerators_list, denominators_list = halley_graph(radicand=225, max_iterations=25)
     plt.plot(numerators_list)
