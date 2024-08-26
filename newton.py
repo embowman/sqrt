@@ -2,12 +2,7 @@ import matplotlib.pyplot as plt
 
 
 def newton_graph(radicand: int, max_iterations: int):
-    iterations_list = list()
-
-    for i in range(1, max_iterations):
-        iterations_list.append((i + radicand / i) / 2)
-
-    return iterations_list
+    return list((i + radicand / i) / 2 for i in range(1, max_iterations))
 
 def newton_method(radicand: int, max_iterations: int):
     prev = radicand
